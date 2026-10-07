@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
+import { FaCloudDownloadAlt } from "react-icons/fa";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -52,6 +53,7 @@ const Navbar = () => {
         {/* Desktop Resume */}
         <div className="hidden md:block">
           <Button href={RESUME_URL}>
+            <FaCloudDownloadAlt size={20} className="mx-2"/>
             Resume
           </Button>
         </div>
@@ -91,7 +93,8 @@ const Navbar = () => {
                 onClick={handleNavClick}
                 className="w-full"
               >
-                Resume ↗
+                <FaCloudDownloadAlt size={20} className="mx-2"/>
+                Resume
               </Button>
             </li>
 
