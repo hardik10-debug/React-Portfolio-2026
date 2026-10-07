@@ -8,6 +8,7 @@ const Button = ({
   variant = "primary",
   className = "",
   onClick,
+  type = "button",
 }) => {
   const baseStyles =
     "inline-flex items-center justify-center px-7 py-3 rounded-xl font-semibold transition active:scale-95 cursor-pointer";
@@ -22,6 +23,7 @@ const Button = ({
 
   const styles = `${baseStyles} ${variants[variant]} ${className}`;
 
+  // External link
   if (href) {
     return (
       <a
@@ -36,6 +38,7 @@ const Button = ({
     );
   }
 
+  // React Router link
   if (to) {
     return (
       <Link
@@ -48,9 +51,10 @@ const Button = ({
     );
   }
 
+  // Normal button
   return (
     <button
-      type="button"
+      type={type}
       className={styles}
       onClick={onClick}
     >
