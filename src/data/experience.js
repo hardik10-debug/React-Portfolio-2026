@@ -5,7 +5,7 @@ const experience = [
   
    {
     company: "ITDA, Uttarakhand",
-    role: "Intern",
+    role: "Full Stack Developer Intern",
     duration: "Sept 2026 — Present",
     image: altimetrikLogo,
     description: [

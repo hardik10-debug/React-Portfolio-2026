@@ -7,7 +7,7 @@ const education = [
     degree: "Bachelor of Technology",
     field: "Computer Science Engineering",
     duration: "2021 — 2025",
-    grade: "CGPA: 8.73 / 10",
+    grade: "CGPA: 8.80 / 10",
     location: "Dehradun, Uttarakhand",
     image: universityImage,
   },
