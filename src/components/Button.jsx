@@ -14,15 +14,14 @@ const Button = ({
 
   const variants = {
     primary:
-      "bg-blue-500 text-white hover:bg-blue-600",
+      "bg-[#22C55E] text-[#09090B] hover:bg-[#4ADE80]",
 
     secondary:
-      "border border-slate-700 text-slate-200 hover:bg-slate-800",
+      "border border-[#3F3F46] text-[#A1A1AA] hover:bg-[#18181B] hover:border-[#22C55E] hover:text-[#22C55E]",
   };
 
   const styles = `${baseStyles} ${variants[variant]} ${className}`;
 
-  // External link
   if (href) {
     return (
       <a
@@ -30,13 +29,13 @@ const Button = ({
         target="_blank"
         rel="noopener noreferrer"
         className={styles}
+        onClick={onClick}
       >
         {children}
       </a>
     );
   }
 
-  // React Router link
   if (to) {
     return (
       <Link
@@ -49,7 +48,6 @@ const Button = ({
     );
   }
 
-  // Normal button
   return (
     <button
       type="button"

@@ -8,14 +8,14 @@ const DeveloperCard = () => {
 
   const terminalRef = useRef(null);
 
- useEffect(() => {
-  if (terminalRef.current) {
-    terminalRef.current.scrollTo({
-      top: terminalRef.current.scrollHeight,
-      behavior: "smooth",
-    });
-  }
-}, [history]);
+  useEffect(() => {
+    if (terminalRef.current) {
+      terminalRef.current.scrollTo({
+        top: terminalRef.current.scrollHeight,
+        behavior: "smooth",
+      });
+    }
+  }, [history]);
 
   useEffect(() => {
     if (commandIndex >= terminalCommands.length) return;
@@ -55,45 +55,47 @@ const DeveloperCard = () => {
   }, [commandIndex]);
 
   return (
-    <div className="w-full max-w-full min-w-0 bg-slate-950 border border-slate-800 rounded-xl overflow-hidden shadow-xl">
+    <div className="w-full max-w-full min-w-0 bg-[#18181B] border border-[#27272A] rounded-xl overflow-hidden shadow-2xl">
 
       {/* Terminal Header */}
-      <div className="flex items-center gap-2 px-4 py-3 border-b border-slate-700">
+      <div className="flex items-center gap-2 px-4 py-3 border-b border-[#27272A]">
 
         <span className="w-3 h-3 rounded-full bg-red-500"></span>
 
         <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
 
-        <span className="w-3 h-3 rounded-full bg-green-500"></span>
+        <span className="w-3 h-3 rounded-full bg-[#22C55E]"></span>
 
-        <span className="ml-3 text-sm text-slate-400 font-mono truncate">
+        <span className="ml-3 text-sm text-[#A1A1AA] font-mono truncate">
           hardik@portfolio:~
         </span>
 
       </div>
 
       {/* Terminal Body */}
-      <div 
-      ref={terminalRef}
-      className="p-4 sm:p-6 font-mono text-xs sm:text-sm min-w-0 max-h-[420px] overflow-y-auto">
-        
+      <div
+        ref={terminalRef}
+        className="p-4 sm:p-6 font-mono text-xs sm:text-sm min-w-0 max-h-[420px] overflow-y-auto"
+      >
+
         {history.map((item) => (
           <div
             className="mb-5 min-w-0"
             key={item.command}
           >
 
-            <p className="text-slate-300">
+            {/* Command */}
+            <p className="text-[#F4F4F5]">
 
-              <span className="text-green-400">
+              <span className="text-[#22C55E]">
                 hardik
               </span>
 
-              <span className="text-slate-500">
+              <span className="text-[#71717A]">
                 @portfolio
               </span>
 
-              <span className="text-cyan-400">
+              <span className="text-[#22C55E]">
                 :~$
               </span>{" "}
 
@@ -102,7 +104,7 @@ const DeveloperCard = () => {
             </p>
 
             {/* Output */}
-            <div className="mt-2 text-slate-400 whitespace-pre-wrap">
+            <div className="mt-2 text-[#A1A1AA] whitespace-pre-wrap">
 
               {item.output.map((line, index) => (
                 <p key={index}>
@@ -117,23 +119,23 @@ const DeveloperCard = () => {
 
         {/* Currently Typing Command */}
         {typedCommand && (
-          <p className="text-slate-300">
+          <p className="text-[#F4F4F5]">
 
-            <span className="text-green-400">
+            <span className="text-[#22C55E]">
               hardik
             </span>
 
-            <span className="text-slate-500">
+            <span className="text-[#71717A]">
               @portfolio
             </span>
 
-            <span className="text-cyan-400">
+            <span className="text-[#22C55E]">
               :~$
             </span>{" "}
 
             {typedCommand}
 
-            <span className="text-cyan-400 animate-pulse">
+            <span className="text-[#22C55E] animate-pulse">
               ▌
             </span>
 
@@ -143,7 +145,7 @@ const DeveloperCard = () => {
         {/* Final Cursor */}
         {!typedCommand &&
           commandIndex >= terminalCommands.length && (
-            <span className="text-cyan-400 animate-pulse">
+            <span className="text-[#22C55E] animate-pulse">
               █
             </span>
           )}

@@ -1,42 +1,35 @@
-import Button from './Button';
+import Button from "./Button";
 
 const AIWelcome = ({ onEnter }) => {
   return (
-    <div className="h-screen bg-slate-900 text-slate-50 flex justify-center items-center flex-col gap-4">
-      
-      <div className="w-full max-w-150 text-center">
+    <div className="min-h-screen bg-[#09090B] text-[#A1A1AA] flex items-center justify-center px-6">
 
-        <div className="font-bold text-3xl flex mx-auto w-fit bg-slate-900 text-blue-400 px-10 py-10">
-           &lt;HC /&gt;
+      <div className="w-full max-w-3xl text-center">
+
+        {/* Logo */}
+        <div className="inline-flex items-center justify-center font-bold text-3xl bg-[#18181B] text-[#22C55E] px-10 py-7 rounded-2xl border border-zinc-800 shadow-lg">
+          &lt;HC /&gt;
         </div>
 
-        <h1 className="text-4xl md:text-5xl font-bold mt-6 text-slate-50">
+        {/* Heading */}
+        <h1 className="text-4xl md:text-5xl font-bold mt-8 text-white">
           Hardik's Portfolio
         </h1>
 
         {/* Description */}
-        <p className="text-lg mt-5 text-slate-400 max-w-xl mx-auto">
+        <p className="text-lg mt-5 text-[#A1A1AA] max-w-xl mx-auto leading-relaxed">
           I know everything about Hardik's skills,
           projects, experience and achievements.
         </p>
 
-        <div className="flex justify-center gap-4 mt-8">
-          
-          
-<Button
-  onClick={onEnter}
-  className="rounded-full bg-blue-500 text-slate-950 hover:bg-cyan-500"
->
-  Let's Begin
-</Button>
-
-          {/* <button
+        {/* Button */}
+        <div className="flex justify-center mt-8">
+          <Button
             onClick={onEnter}
-            className="font-bold rounded-full bg-transparent border border-gray-400 px-8 py-5 cursor-pointer active:scale-95"
+            className="rounded-full bg-[#22C55E] text-[#09090B] hover:bg-green-400 px-8 py-4"
           >
-            Skip
-          </button> */}
-
+            Let's Begin
+          </Button>
         </div>
 
       </div>
