@@ -23,7 +23,6 @@ const Button = ({
 
   const styles = `${baseStyles} ${variants[variant]} ${className}`;
 
-  // External link
   if (href) {
     return (
       <a
@@ -38,7 +37,6 @@ const Button = ({
     );
   }
 
-  // React Router link
   if (to) {
     return (
       <Link
@@ -51,7 +49,6 @@ const Button = ({
     );
   }
 
-  // Normal button
   return (
     <button
       type={type}
