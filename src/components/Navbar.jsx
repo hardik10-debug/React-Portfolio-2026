@@ -12,6 +12,7 @@ const navItems = [
   { name: "Projects", path: "/projects" },
   { name: "Contact", path: "/contact" },
 ];
+
 const RESUME_URL =
   "https://drive.google.com/file/d/1Z9pvBK2hPcYqqeQHEzIxwSG5bs3di7Z2/view?usp=drive_link";
 
@@ -39,12 +40,12 @@ const Navbar = () => {
           <ul className="flex items-center gap-8 text-base font-medium">
             {navItems.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.path}
+                <Link
+                  to={item.path}
                   className="text-[#A1A1AA] hover:text-[#22C55E] transition"
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -53,7 +54,7 @@ const Navbar = () => {
         {/* Desktop Resume */}
         <div className="hidden md:block">
           <Button href={RESUME_URL}>
-            <FaCloudDownloadAlt size={20} className="mx-2"/>
+            <FaCloudDownloadAlt size={20} className="mx-2" />
             Resume
           </Button>
         </div>
@@ -76,24 +77,23 @@ const Navbar = () => {
 
             {navItems.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.path}
+                <Link
+                  to={item.path}
                   onClick={handleNavClick}
                   className="block text-[#A1A1AA] hover:text-[#22C55E] transition"
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
 
-            {/* Mobile Resume */}
             <li className="pt-2">
               <Button
                 href={RESUME_URL}
                 onClick={handleNavClick}
                 className="w-full"
               >
-                <FaCloudDownloadAlt size={20} className="mx-2"/>
+                <FaCloudDownloadAlt size={20} className="mx-2" />
                 Resume
               </Button>
             </li>

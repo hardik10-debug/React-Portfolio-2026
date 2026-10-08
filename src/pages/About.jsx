@@ -7,7 +7,7 @@ import { GrResume } from "react-icons/gr";
 
 const About = () => {
   return (
-    <main className="min-h-screen bg-[#09090B] text-[#A1A1AA] pt-16">
+    <main className="bg-[#09090B] text-[#A1A1AA] pt-16">
       <section className="max-w-6xl mx-auto px-6 md:px-8 py-20">
 
         <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-16 items-start">
