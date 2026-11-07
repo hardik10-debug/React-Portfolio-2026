@@ -75,7 +75,7 @@ const DeveloperCard = () => {
       {/* Terminal Body */}
       <div
         ref={terminalRef}
-        className="p-4 sm:p-6 font-mono text-xs sm:text-sm min-w-0 max-h-[420px] overflow-hidden"
+        className="p-4 sm:p-6 font-mono text-xs sm:text-sm min-w-0 max-h-[420px]"
       >
 
         {history.map((item) => (
