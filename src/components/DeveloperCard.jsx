@@ -55,7 +55,7 @@ const DeveloperCard = () => {
   }, [commandIndex]);
 
   return (
-    <div className="w-full max-w-full min-w-0 bg-[#18181B] border border-[#27272A] rounded-xl overflow-hidden shadow-2xl">
+    <div className="w-full max-w-full min-w-0 bg-[#18181B] border border-[#27272A] rounded-xl shadow-2xl">
 
       {/* Terminal Header */}
       <div className="flex items-center gap-2 px-4 py-3 border-b border-[#27272A]">
